@@ -102,3 +102,11 @@ select:focus { outline: 2px solid var(--accent); border-color: transparent; }
 
 /* ---------- Outfit pictures ---------- */
 .outfit-img { width: 100%; height: auto; display: block; border-radius: 12px; }
+.outfit-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; display: block; border-radius: 12px; background: var(--soft); }
+.credit { margin: 6px 0 0; font-size: .72rem; color: var(--muted); }
+.credit a { color: inherit; }
+.local-body { display: flex; gap: 20px; align-items: center; }
+.local-media:not(.has-photo) { display: none; }
+.local-media { flex: 0 0 180px; }
+.local-media .outfit-photo { aspect-ratio: 3 / 4; }
+@media (max-width: 600px) { .local-body { flex-direction: column; align-items: stretch; } .local-media { flex-basis: auto; } }

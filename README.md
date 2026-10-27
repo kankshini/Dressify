@@ -7,7 +7,7 @@ Dressify is a full-stack web app that gives you **personalized outfit ideas** ba
 - 🌦️ **Season** (Summer, Winter, Monsoon / Rainy, Spring, Autumn)
 - 🎉 **Occasion** (Casual, Office, Party, Wedding, Festival, Date night, Job interview, Travel)
 
-For every choice you get outfit ideas with a **picture of each look**, a local / traditional style idea, colours that suit the season, fabrics, accessories, do's and don'ts, and cultural etiquette tips. You can also **save looks you like**, and they are stored on the server.
+For every choice you get outfit ideas with a **picture of each look** (a real photo from Pixabay if you add a free key, otherwise a drawing), a local / traditional style idea, colours that suit the season, fabrics, accessories, do's and don'ts, and cultural etiquette tips. You can also **save looks you like**, and they are stored on the server.
 
 ![Dressify results page](screenshots/desktop-results.png)
 
@@ -50,6 +50,7 @@ Other handy commands:
    - then **adapts them to the season** (for example, it adds a warm coat in winter, a rain jacket in monsoon, and swaps sandals for boots when it's cold),
    - then adds **country info**: weather notes, a traditional outfit idea, and etiquette tips.
 4. The server sends the answer back as JSON and the **page draws the result cards**. Each outfit gets a picture drawn in code by `public/illustration.js`: it reads words like "jeans", "dress" or "boots" and draws those shapes in the season's colours. Because the pictures are drawn by the app, they work offline and have no copyright issues.
+6. **Real photos (optional):** if you set a `PIXABAY_API_KEY`, the page also asks the server for a photo (`/api/photo`). The server searches Pixabay, for example for "woman midi wrap dress outfit", and the photo replaces the drawing, with credit to the photographer. See [DEPLOY.md](DEPLOY.md#-step-4-turn-on-real-outfit-photos-optional-free) for how to get a key.
 5. When you press **"♥ Save this look"**, the browser sends it to the server, which writes it into `data/favorites.json`.
 
 ```
@@ -91,6 +92,7 @@ dressify/
 |---|---|---|
 | GET | `/api/options` | Lists of countries, genders, seasons, occasions |
 | GET | `/api/recommend?country=india&gender=women&season=summer&occasion=wedding` | Get a recommendation |
+| GET | `/api/photo?query=woman+wrap+dress+outfit` | A matching Pixabay photo (or `null` without a key) |
 | GET | `/api/favorites` | All saved looks |
 | POST | `/api/favorites` | Save a look (send `country, gender, season, occasion, outfitName` as JSON) |
 | DELETE | `/api/favorites/:id` | Remove a saved look |
@@ -117,7 +119,6 @@ Run `npm test` afterwards. It checks every combination still works.
 
 ## 💡 Ideas for next steps
 
-- Add real outfit photos next to the drawings
 - Detect the user's country and current season automatically
 - Add user accounts so each person has their own saved looks
 - Move the data into a real database such as SQLite or MongoDB

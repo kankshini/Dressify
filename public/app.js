@@ -21,7 +21,7 @@ const COLOR_MAP = {
 function esc(text) {
   const div = document.createElement('div');
   div.textContent = text;
-  return div.innerHTML;
+  return div.innerHTML.replace(/"/g, '&quot;');
 }
 
 function labelFor(list, id) {
@@ -66,7 +66,9 @@ function showResults(r) {
 
   const outfitCards = r.outfits.map((o, i) => `
     <article class="outfit">
-      ${outfitSVG(o, palette, i)}
+      <div class="media" data-query="${esc(o.photo.query)}" data-backup="${esc(o.photo.backup)}">
+        ${outfitSVG(o, palette, i)}
+      </div>
       <h3>${esc(o.name)}</h3>
       <ul>${o.pieces.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>
       <div class="row"><strong>Shoes:</strong> ${esc(o.footwear)}</div>
@@ -93,7 +95,10 @@ function showResults(r) {
     ${r.localWear ? `
     <div class="card local">
       <h2>🌍 Local style idea</h2>
-      <p>${esc(r.localWear)}</p>
+      <div class="local-body">
+        <div class="media local-media" data-query="${esc(r.localWear.photo.query)}" data-backup="${esc(r.localWear.photo.backup)}"></div>
+        <p>${esc(r.localWear.text)}</p>
+      </div>
     </div>` : ''}
 
     <div class="two-col">
@@ -116,9 +121,37 @@ function showResults(r) {
   results.hidden = false;
   results.scrollIntoView({ behavior: 'smooth' });
 
+  loadPhotos();
+
   // Hook up the "Save this look" buttons.
   results.querySelectorAll('[data-save]').forEach((btn) => {
     btn.addEventListener('click', () => saveFavorite(r.outfits[btn.dataset.save].name, btn));
+  });
+}
+
+// Ask the server for a real photo for each picture spot.
+// If there's no photo (or no internet), the drawing simply stays.
+function loadPhotos() {
+  results.querySelectorAll('.media').forEach(async (box) => {
+    try {
+      const params = new URLSearchParams({ query: box.dataset.query, backup: box.dataset.backup });
+      const { photo } = await (await fetch('/api/photo?' + params)).json();
+      if (!photo) return;
+      const img = new Image();
+      img.alt = photo.alt;
+      img.className = 'outfit-photo';
+      img.onload = () => {
+        box.innerHTML = '';
+        box.append(img);
+        box.insertAdjacentHTML('beforeend', `<p class="credit">Photo by
+          <a href="${esc(photo.photographerUrl)}" target="_blank" rel="noopener">${esc(photo.photographer)}</a> on
+          <a href="${esc(photo.sourceUrl)}" target="_blank" rel="noopener">Pixabay</a></p>`);
+        box.classList.add('has-photo');
+      };
+      img.src = photo.url;
+    } catch {
+      // keep the drawing
+    }
   });
 }
 

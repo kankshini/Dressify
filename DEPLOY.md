@@ -19,6 +19,8 @@ It takes about 15 minutes. You don't need a credit card.
 4. On the next page, click the link **"uploading an existing file"**.
 5. Open your unzipped `dressify` folder on your computer. Select **everything inside it** except the `node_modules` folder (if you have one), and drag it into the GitHub page.
    - Make sure `package.json`, `server.js` and `render.yaml` are in the list, not inside another folder.
+   - **Drag, don't use "choose your files".** The file picker can't select folders, so the `src`, `data` and `public` folders get left out and the site crashes with `Cannot find module './src/recommend'`. Dragging from File Explorer keeps the folders.
+   - After committing, check that the repo page shows the folders `data`, `public` and `src`.
 6. Scroll down and click **Commit changes**.
 
 > 💡 If you know Git, you can instead run `git init`, `git add .`, `git commit -m "Dressify"` and push, as GitHub shows on the empty repo page.
@@ -49,6 +51,31 @@ That's your website! Share the link with anyone. 🎉
 ## Step 3: Updating the website later
 
 Whenever you change the code, upload the changed files to your GitHub repo again (**Add file → Upload files**). Render notices and updates the website by itself in a couple of minutes.
+
+---
+
+## 📸 Step 4: Turn on real outfit photos (optional, free)
+
+Dressify can show a real photo for every outfit, taken from **Pixabay**, a free photo website. It needs a free "key" (like a password that lets the app ask Pixabay for photos). Without a key, the site shows the drawn pictures instead.
+
+1. Go to https://pixabay.com/accounts/register/ and create a free account (or sign in with Google or Facebook). Confirm your email if it asks.
+2. Open https://pixabay.com/api/docs/ while signed in. Your key is shown in the page text, in a green box under **Parameters** (next to `key`).
+3. Copy the key. Don't share it with anyone or put it in your code.
+4. In Render, open your service, click **Environment**, then **Add Environment Variable**:
+   - Key: `PIXABAY_API_KEY`
+   - Value: paste your key
+5. Click **Save, rebuild, and deploy**. After a couple of minutes, the outfits show photos, each crediting its photographer.
+
+You can delete any old `UNSPLASH_ACCESS_KEY` or `PEXELS_API_KEY` entries on the same Environment page.
+
+**Running on your own computer with photos** (Windows PowerShell):
+
+```powershell
+$env:PIXABAY_API_KEY="paste-your-key-here"
+npm start
+```
+
+> Pixabay allows 100 photo searches per minute for free. Dressify also remembers the photos it found (for 24 hours, as Pixabay asks), so that's plenty.
 
 ---
 

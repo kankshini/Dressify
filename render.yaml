@@ -7,3 +7,8 @@ services:
     buildCommand: npm install
     startCommand: npm start
     healthCheckPath: /api/options
+    envVars:
+      # Free key from https://pixabay.com/api/docs/ for outfit photos.
+      # Render asks you to type it in; it is never stored in the code.
+      - key: PIXABAY_API_KEY
+        sync: false

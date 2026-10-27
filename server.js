@@ -39,6 +39,47 @@ app.get('/api/recommend', (req, res) => {
   res.json(recommend(req.query));
 });
 
+// --- Outfit photos from Pixabay (free photo website) ---
+// Needs a free key in the PIXABAY_API_KEY setting. Without one, the
+// website simply keeps showing the drawings.
+const photoCache = new Map(); // remembers answers so we don't ask Pixabay twice
+const CACHE_HOURS = 24;       // Pixabay asks apps not to keep photo links longer than this
+
+async function searchPixabay(query) {
+  const saved = photoCache.get(query);
+  if (saved && Date.now() - saved.time < CACHE_HOURS * 3600 * 1000) return saved.photo;
+
+  const url = 'https://pixabay.com/api/?' + new URLSearchParams({
+    key: process.env.PIXABAY_API_KEY, q: query.slice(0, 100), image_type: 'photo',
+    orientation: 'vertical', safesearch: 'true', per_page: '3'
+  });
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Pixabay answered ${res.status}`);
+  const first = (await res.json()).hits[0];
+  const photo = first ? {
+    url: first.webformatURL,
+    alt: first.tags || query,
+    photographer: first.user,
+    photographerUrl: `https://pixabay.com/users/${first.user}-${first.user_id}/`,
+    sourceUrl: first.pageURL
+  } : null;
+  photoCache.set(query, { photo, time: Date.now() });
+  return photo;
+}
+
+// GET /api/photo?query=woman+wrap+dress+outfit&backup=woman+date+outfit
+app.get('/api/photo', async (req, res) => {
+  const { query, backup } = req.query;
+  if (!process.env.PIXABAY_API_KEY || !query) return res.json({ photo: null });
+  try {
+    const photo = (await searchPixabay(query)) || (backup ? await searchPixabay(backup) : null);
+    res.json({ photo });
+  } catch (err) {
+    console.error('Photo search failed:', err.message);
+    res.json({ photo: null }); // the website falls back to the drawing
+  }
+});
+
 // GET /api/favorites -> all saved looks
 app.get('/api/favorites', (req, res) => {
   res.json(readFavorites());
