@@ -1,0 +1,474 @@
+{
+  "genders": [
+    { "id": "women", "label": "Women" },
+    { "id": "men", "label": "Men" },
+    { "id": "unisex", "label": "Unisex / Gender-neutral" }
+  ],
+
+  "seasons": {
+    "summer": {
+      "label": "Summer",
+      "icon": "☀️",
+      "fabrics": ["Cotton", "Linen", "Chambray", "Seersucker"],
+      "colors": ["White", "Pastel blue", "Mint", "Peach", "Lemon yellow"],
+      "layer": null,
+      "accessories": ["Sunglasses", "Wide-brim hat or cap", "Light canvas tote"],
+      "tips": [
+        "Pick loose, breathable fits so air can move.",
+        "Light colours reflect heat and keep you cooler.",
+        "Carry a water bottle and use sunscreen."
+      ],
+      "avoid": ["Heavy denim", "Polyester that traps sweat", "Dark, tight layers"]
+    },
+    "winter": {
+      "label": "Winter",
+      "icon": "❄️",
+      "fabrics": ["Wool", "Cashmere", "Fleece", "Corduroy", "Flannel"],
+      "colors": ["Charcoal", "Camel", "Burgundy", "Forest green", "Navy"],
+      "layer": {
+        "women": "Wool coat or puffer jacket with a thermal inner layer",
+        "men": "Overcoat or puffer jacket with a thermal inner layer",
+        "unisex": "Oversized puffer or wool coat with a thermal inner layer"
+      },
+      "accessories": ["Scarf", "Gloves", "Beanie", "Warm socks"],
+      "tips": [
+        "Layer up: thin base layer, warm middle layer, wind-proof outer layer.",
+        "Keep your head, hands and feet warm first.",
+        "Closed shoes or boots with good grip."
+      ],
+      "avoid": ["Open sandals", "Thin cotton as the only layer"]
+    },
+    "monsoon": {
+      "label": "Monsoon / Rainy",
+      "icon": "🌧️",
+      "fabrics": ["Quick-dry synthetics", "Light cotton blends", "Rayon"],
+      "colors": ["Navy", "Olive", "Mustard", "Teal", "Bright prints that hide splashes"],
+      "layer": {
+        "women": "Light hooded rain jacket or trench coat",
+        "men": "Light hooded rain jacket or windcheater",
+        "unisex": "Packable rain poncho or hooded windcheater"
+      },
+      "accessories": ["Compact umbrella", "Waterproof bag cover", "Waterproof watch"],
+      "tips": [
+        "Choose fabrics that dry fast and don't turn see-through.",
+        "Ankle-length or cropped bottoms stay out of puddles.",
+        "Waterproof shoes or rubber sandals save your footwear."
+      ],
+      "avoid": ["Suede or leather shoes", "White clothes", "Long trailing hems"]
+    },
+    "spring": {
+      "label": "Spring",
+      "icon": "🌸",
+      "fabrics": ["Cotton", "Light knits", "Denim", "Silk blends"],
+      "colors": ["Lavender", "Blush pink", "Sage green", "Sky blue", "Cream"],
+      "layer": {
+        "women": "Light cardigan or denim jacket",
+        "men": "Light bomber or denim jacket",
+        "unisex": "Light overshirt or denim jacket"
+      },
+      "accessories": ["Light scarf", "Sunglasses", "Canvas sneakers"],
+      "tips": [
+        "Mornings can be cool, so carry one light layer.",
+        "Florals and soft pastels match the season.",
+        "Mix textures like denim with cotton."
+      ],
+      "avoid": ["Heavy winter coats", "Very dark, gloomy palettes"]
+    },
+    "autumn": {
+      "label": "Autumn / Fall",
+      "icon": "🍂",
+      "fabrics": ["Light wool", "Corduroy", "Suede", "Denim", "Knitwear"],
+      "colors": ["Rust", "Mustard", "Olive", "Chocolate brown", "Deep orange"],
+      "layer": {
+        "women": "Trench coat or knit cardigan",
+        "men": "Suede or field jacket",
+        "unisex": "Chunky knit sweater or trench coat"
+      },
+      "accessories": ["Ankle boots", "Light scarf", "Leather belt"],
+      "tips": [
+        "Earthy colours look great in autumn light.",
+        "Layer a sweater over a shirt for an easy smart look.",
+        "Boots work for both style and changing weather."
+      ],
+      "avoid": ["Neon summer colours", "Flimsy flip-flops"]
+    }
+  },
+
+  "occasions": {
+    "casual": {
+      "label": "Casual / Everyday",
+      "icon": "👕",
+      "outfits": {
+        "women": [
+          { "name": "Easy weekend", "pieces": ["Relaxed cotton t-shirt", "High-waist straight jeans"], "footwear": "White sneakers", "accessories": ["Crossbody bag", "Simple studs"] },
+          { "name": "Breezy day out", "pieces": ["Printed midi dress"], "footwear": "Flat sandals", "accessories": ["Straw tote", "Thin bracelet"] }
+        ],
+        "men": [
+          { "name": "Classic casual", "pieces": ["Crew-neck t-shirt", "Slim chinos"], "footwear": "Clean white sneakers", "accessories": ["Analog watch"] },
+          { "name": "Relaxed layers", "pieces": ["Short-sleeve linen shirt", "Dark denim jeans"], "footwear": "Canvas shoes", "accessories": ["Baseball cap", "Leather strap watch"] }
+        ],
+        "unisex": [
+          { "name": "Street comfort", "pieces": ["Oversized graphic tee", "Relaxed cargo pants"], "footwear": "Chunky sneakers", "accessories": ["Tote or backpack", "Bucket hat"] },
+          { "name": "Minimal basics", "pieces": ["Plain boxy shirt", "Wide-leg trousers"], "footwear": "Slip-on sneakers", "accessories": ["Canvas tote"] }
+        ]
+      }
+    },
+    "office": {
+      "label": "Office / Work",
+      "icon": "💼",
+      "outfits": {
+        "women": [
+          { "name": "Smart and simple", "pieces": ["Tucked-in blouse", "Tailored trousers"], "footwear": "Block heels or loafers", "accessories": ["Structured handbag", "Minimal watch"] },
+          { "name": "Polished dress", "pieces": ["Knee-length sheath dress", "Light blazer"], "footwear": "Pointed flats", "accessories": ["Pearl studs", "Work tote"] }
+        ],
+        "men": [
+          { "name": "Business casual", "pieces": ["Oxford button-down shirt", "Chinos", "Leather belt"], "footwear": "Loafers or derby shoes", "accessories": ["Leather watch", "Laptop bag"] },
+          { "name": "Sharp formal", "pieces": ["Light shirt", "Tailored suit", "Tie (optional)"], "footwear": "Oxford shoes", "accessories": ["Matching belt", "Pocket square"] }
+        ],
+        "unisex": [
+          { "name": "Modern professional", "pieces": ["Crisp collared shirt", "Straight-cut trousers", "Unstructured blazer"], "footwear": "Loafers", "accessories": ["Minimal backpack", "Simple watch"] },
+          { "name": "Smart knit", "pieces": ["Fine-knit sweater over a shirt", "Dark trousers"], "footwear": "Leather sneakers", "accessories": ["Messenger bag"] }
+        ]
+      }
+    },
+    "party": {
+      "label": "Party / Night out",
+      "icon": "🎉",
+      "outfits": {
+        "women": [
+          { "name": "Little black dress", "pieces": ["Fitted black dress"], "footwear": "Strappy heels", "accessories": ["Clutch", "Statement earrings"] },
+          { "name": "Glam co-ord", "pieces": ["Satin top", "Matching wide-leg pants"], "footwear": "Heeled mules", "accessories": ["Metallic clutch", "Layered necklace"] }
+        ],
+        "men": [
+          { "name": "Dark and sharp", "pieces": ["Black shirt", "Slim dark trousers"], "footwear": "Chelsea boots", "accessories": ["Silver watch"] },
+          { "name": "Smart party", "pieces": ["Printed shirt", "Black jeans", "Casual blazer"], "footwear": "Suede loafers", "accessories": ["Bracelet"] }
+        ],
+        "unisex": [
+          { "name": "Statement piece", "pieces": ["Sequin or satin shirt", "Black straight trousers"], "footwear": "Platform boots", "accessories": ["Chain necklace", "Rings"] },
+          { "name": "All-black cool", "pieces": ["Black mesh or silk top", "Leather-look pants"], "footwear": "Chunky boots", "accessories": ["Small shoulder bag"] }
+        ]
+      }
+    },
+    "wedding": {
+      "label": "Wedding (guest)",
+      "icon": "💍",
+      "outfits": {
+        "women": [
+          { "name": "Elegant guest", "pieces": ["Flowy floor-length gown in a jewel tone"], "footwear": "Embellished heels", "accessories": ["Clutch", "Drop earrings"] },
+          { "name": "Classic chic", "pieces": ["Midi wrap dress", "Light shawl"], "footwear": "Block heels", "accessories": ["Pearl jewellery"] }
+        ],
+        "men": [
+          { "name": "Classic suit", "pieces": ["Two-piece suit in navy or grey", "White shirt", "Silk tie"], "footwear": "Polished oxfords", "accessories": ["Pocket square", "Cufflinks"] },
+          { "name": "Smart separates", "pieces": ["Blazer", "Contrast trousers", "Dress shirt"], "footwear": "Brogues", "accessories": ["Leather belt", "Watch"] }
+        ],
+        "unisex": [
+          { "name": "Tailored set", "pieces": ["Matching suit or jumpsuit in a soft colour", "Silk shirt"], "footwear": "Dressy loafers", "accessories": ["Brooch", "Minimal jewellery"] },
+          { "name": "Soft formal", "pieces": ["Long tunic", "Tailored trousers"], "footwear": "Dress shoes", "accessories": ["Statement watch"] }
+        ]
+      }
+    },
+    "festival": {
+      "label": "Festival / Celebration",
+      "icon": "🪔",
+      "outfits": {
+        "women": [
+          { "name": "Festive bright", "pieces": ["Bright embroidered top", "Flared skirt"], "footwear": "Embellished flats", "accessories": ["Statement earrings", "Bangles"] },
+          { "name": "Celebration dress", "pieces": ["Colourful printed maxi dress"], "footwear": "Wedge sandals", "accessories": ["Potli or small bag"] }
+        ],
+        "men": [
+          { "name": "Festive smart", "pieces": ["Rich-coloured shirt", "Tailored trousers"], "footwear": "Loafers", "accessories": ["Watch"] },
+          { "name": "Relaxed celebration", "pieces": ["Printed shirt", "Chinos"], "footwear": "Leather sandals", "accessories": ["Bracelet"] }
+        ],
+        "unisex": [
+          { "name": "Colour pop", "pieces": ["Embroidered overshirt", "Plain tee", "Straight pants"], "footwear": "Comfortable flats", "accessories": ["Beaded jewellery"] },
+          { "name": "Festival comfort", "pieces": ["Loose printed kaftan top", "Wide trousers"], "footwear": "Sandals", "accessories": ["Small crossbody bag"] }
+        ]
+      }
+    },
+    "date": {
+      "label": "Date night",
+      "icon": "❤️",
+      "outfits": {
+        "women": [
+          { "name": "Romantic", "pieces": ["Satin slip skirt", "Fitted knit top"], "footwear": "Kitten heels", "accessories": ["Delicate necklace", "Mini bag"] },
+          { "name": "Effortless", "pieces": ["Wrap dress"], "footwear": "Ankle strap sandals", "accessories": ["Hoop earrings"] }
+        ],
+        "men": [
+          { "name": "Smart casual", "pieces": ["Fitted polo or knit shirt", "Dark chinos"], "footwear": "Suede loafers", "accessories": ["Leather watch", "Light fragrance"] },
+          { "name": "Classic charm", "pieces": ["Crisp white shirt", "Dark jeans", "Casual blazer"], "footwear": "Chelsea boots", "accessories": ["Belt matching shoes"] }
+        ],
+        "unisex": [
+          { "name": "Relaxed chic", "pieces": ["Silk button-up", "Tailored trousers"], "footwear": "Clean leather shoes", "accessories": ["Thin chain"] },
+          { "name": "Cosy cool", "pieces": ["Soft knit sweater", "Straight jeans"], "footwear": "Low boots", "accessories": ["Ring stack"] }
+        ]
+      }
+    },
+    "interview": {
+      "label": "Job interview",
+      "icon": "🤝",
+      "outfits": {
+        "women": [
+          { "name": "Confident classic", "pieces": ["Neutral blazer", "Plain blouse", "Matching trousers or pencil skirt"], "footwear": "Closed-toe low heels", "accessories": ["Simple studs", "Structured bag"] }
+        ],
+        "men": [
+          { "name": "Interview ready", "pieces": ["Dark suit or blazer", "Light plain shirt", "Simple tie"], "footwear": "Polished oxfords", "accessories": ["Plain watch", "Folder or portfolio"] }
+        ],
+        "unisex": [
+          { "name": "Clean and neutral", "pieces": ["Neutral blazer", "Plain shirt", "Tailored trousers"], "footwear": "Polished closed shoes", "accessories": ["Minimal watch", "Neat folder"] }
+        ]
+      }
+    },
+    "travel": {
+      "label": "Travel",
+      "icon": "✈️",
+      "outfits": {
+        "women": [
+          { "name": "Comfy traveller", "pieces": ["Soft t-shirt", "Joggers or stretch pants", "Light zip hoodie"], "footwear": "Slip-on sneakers", "accessories": ["Crossbody bag", "Neck pillow"] }
+        ],
+        "men": [
+          { "name": "Airport smart", "pieces": ["Polo shirt", "Stretch chinos", "Light jacket"], "footwear": "Comfortable sneakers", "accessories": ["Backpack", "Sunglasses"] }
+        ],
+        "unisex": [
+          { "name": "Layered comfort", "pieces": ["Plain tee", "Relaxed joggers", "Zip hoodie"], "footwear": "Easy slip-on shoes", "accessories": ["Backpack", "Water bottle"] }
+        ]
+      }
+    }
+  },
+
+  "countries": {
+    "india": {
+      "name": "India",
+      "flag": "🇮🇳",
+      "styleNote": "A mix of rich traditional wear and modern Indo-western fusion. Bright colours are loved, especially at celebrations.",
+      "seasonNotes": {
+        "summer": "Very hot in most regions. Cotton kurtas and light linen are everyday favourites.",
+        "winter": "Mild in the south, cold in the north. A shawl or Nehru jacket adds warmth with style.",
+        "monsoon": "Heavy rain from June to September. Quick-dry fabrics and waterproof sandals help.",
+        "spring": "Pleasant and colourful, the season of Holi. Light fabrics in bright shades.",
+        "autumn": "Festival season (Navratri, Diwali). Time to bring out festive wear."
+      },
+      "traditional": {
+        "women": {
+          "wedding": "Silk saree or a lehenga in red, pink or gold",
+          "festival": "Anarkali suit or a festive saree",
+          "office": "Cotton kurta with straight pants and a dupatta",
+          "casual": "Short kurti with jeans"
+        },
+        "men": {
+          "wedding": "Sherwani or a kurta with a Nehru jacket",
+          "festival": "Silk kurta pyjama",
+          "office": "Formal shirt, trousers, or a Nehru jacket on special days",
+          "casual": "Short cotton kurta with jeans"
+        },
+        "unisex": {
+          "wedding": "Long embroidered kurta with a Nehru jacket",
+          "festival": "Bandhani or block-print kurta set",
+          "casual": "Khadi cotton shirt with loose pants"
+        }
+      },
+      "etiquette": [
+        "Cover shoulders and knees when visiting temples, and remove shoes.",
+        "Avoid wearing all-white or all-black to a wedding; bright colours are welcome.",
+        "Modest outfits are appreciated in smaller towns."
+      ]
+    },
+    "usa": {
+      "name": "United States",
+      "flag": "🇺🇸",
+      "styleNote": "Comfort-first and casual in daily life, with a strong love for denim, sneakers and athleisure.",
+      "seasonNotes": {
+        "summer": "Hot and humid in many states. Shorts, tees and sundresses are normal.",
+        "winter": "Very cold in the north and mild in the south. Puffers and boots are standard up north.",
+        "monsoon": "Rainy spells, especially in the Pacific Northwest. A good rain jacket is key.",
+        "spring": "Mild and changeable. Layering is the way to go.",
+        "autumn": "Classic sweater weather with flannels, boots and fall colours."
+      },
+      "traditional": {
+        "women": { "festival": "Red, white and blue for the 4th of July, or cosy knits at Thanksgiving" },
+        "men": { "festival": "Flannel shirt and jeans for Thanksgiving, or a patriotic tee for the 4th of July" },
+        "unisex": { "festival": "Team jersey for game day, or cosy fall layers for Thanksgiving" }
+      },
+      "etiquette": [
+        "Wedding invitations often state a dress code (black tie, cocktail, casual); follow it.",
+        "Never wear white to a wedding unless asked.",
+        "Business casual is common in offices outside finance and law."
+      ]
+    },
+    "uk": {
+      "name": "United Kingdom",
+      "flag": "🇬🇧",
+      "styleNote": "Classic tailoring meets street style. Trench coats, knitwear and smart boots are staples.",
+      "seasonNotes": {
+        "summer": "Mild and unpredictable. Bring a light jacket even on sunny days.",
+        "winter": "Cold, damp and dark. A good wool coat and waterproof boots are essential.",
+        "monsoon": "Rain is common all year. A trench coat or packable rain jacket is a must.",
+        "spring": "Cool and showery. Layers and a compact umbrella.",
+        "autumn": "Crisp and wet. Knitwear and ankle boots."
+      },
+      "traditional": {
+        "women": { "wedding": "Smart dress with a fascinator or hat for a formal day wedding" },
+        "men": { "wedding": "Morning suit for very formal weddings, or a tailored lounge suit" },
+        "unisex": { "wedding": "Tailored suit with a statement hat or fascinator" }
+      },
+      "etiquette": [
+        "Hats and fascinators are common at formal weddings and the races.",
+        "Smart-casual is a safe choice for most restaurants.",
+        "Always pack for rain."
+      ]
+    },
+    "japan": {
+      "name": "Japan",
+      "flag": "🇯🇵",
+      "styleNote": "Neat, minimal and well-fitted, with bold street-style scenes in Tokyo and Osaka.",
+      "seasonNotes": {
+        "summer": "Hot and very humid. Breathable cotton and linen, plus a small towel.",
+        "winter": "Cold, especially in the north. Long coats and thin warm layers like heat-tech.",
+        "monsoon": "Tsuyu rainy season in June and July. Compact umbrellas are everywhere.",
+        "spring": "Cherry blossom season. Soft pastels and light trench coats.",
+        "autumn": "Cool and beautiful. Earthy tones and light knits."
+      },
+      "traditional": {
+        "women": { "festival": "Cotton yukata with a bright obi belt (summer matsuri)", "wedding": "Formal dress in a soft colour, or a kimono for close family" },
+        "men": { "festival": "Yukata or jinbei for summer festivals", "wedding": "Dark suit with a white tie" },
+        "unisex": { "festival": "Jinbei set or yukata for summer festivals" }
+      },
+      "etiquette": [
+        "Wear socks without holes; you often remove shoes indoors.",
+        "Office dress is conservative: dark suits and plain colours.",
+        "Revealing outfits are less common than in the West."
+      ]
+    },
+    "uae": {
+      "name": "United Arab Emirates",
+      "flag": "🇦🇪",
+      "styleNote": "Luxury and modest fashion side by side. Elegant, covered silhouettes are respected.",
+      "seasonNotes": {
+        "summer": "Extremely hot outside but icy air-conditioning inside. Light fabrics plus a thin layer.",
+        "winter": "Pleasant and mild, perfect for outdoor evenings. A light jacket at night.",
+        "monsoon": "Rain is rare. Treat it as a mild season and dress light.",
+        "spring": "Warm and pleasant. Breathable, modest outfits.",
+        "autumn": "Still hot, cooling slowly. Light, covered outfits."
+      },
+      "traditional": {
+        "women": { "wedding": "Embellished abaya or a long modest gown", "festival": "Elegant kaftan or abaya for Eid" },
+        "men": { "wedding": "Kandura with a ghutra, or a formal suit", "festival": "Crisp white kandura for Eid" },
+        "unisex": { "festival": "Long linen kaftan or tunic set for Eid" }
+      },
+      "etiquette": [
+        "Cover shoulders and knees in malls and public places.",
+        "Swimwear belongs at the beach or pool only.",
+        "Wear modest, loose outfits when visiting mosques; women should cover their hair."
+      ]
+    },
+    "france": {
+      "name": "France",
+      "flag": "🇫🇷",
+      "styleNote": "Effortless chic: neutral colours, quality basics and one standout piece.",
+      "seasonNotes": {
+        "summer": "Warm and sunny in the south. Linen dresses, shirts and espadrilles.",
+        "winter": "Cold and grey in Paris. A camel coat and a scarf are the classic look.",
+        "monsoon": "Rainy spells in spring and autumn. A trench coat is very French.",
+        "spring": "Mild and fresh. Breton stripes and light jackets.",
+        "autumn": "Cool and stylish. Knitwear, ankle boots and trench coats."
+      },
+      "traditional": {
+        "women": { "festival": "Breton stripe top with a red scarf for Bastille Day" },
+        "men": { "festival": "Breton stripe shirt with chinos for Bastille Day" },
+        "unisex": { "festival": "Navy-and-white Breton stripes for Bastille Day" }
+      },
+      "etiquette": [
+        "Gym wear in the city is frowned on; aim for neat and simple.",
+        "Less is more: fewer, better pieces.",
+        "Dress up a little for dinner out."
+      ]
+    },
+    "nigeria": {
+      "name": "Nigeria",
+      "flag": "🇳🇬",
+      "styleNote": "Bold prints, rich fabrics and proud traditional wear. Ankara prints are everywhere.",
+      "seasonNotes": {
+        "summer": "Hot all year. Light, breathable Ankara cotton is perfect.",
+        "winter": "Harmattan season brings dry, dusty air. Light layers and moisturiser.",
+        "monsoon": "Rainy season from April to October. Quick-dry prints and closed sandals.",
+        "spring": "Warm. Bright prints and light fabrics.",
+        "autumn": "Warm and humid. Breathable traditional or modern pieces."
+      },
+      "traditional": {
+        "women": { "wedding": "Iro and buba with a gele head-tie, often in matching 'aso ebi' colours", "festival": "Ankara print gown" },
+        "men": { "wedding": "Agbada or senator outfit with a fila cap", "festival": "Dashiki or senator suit" },
+        "unisex": { "wedding": "Ankara print kaftan in the event's aso ebi colour", "festival": "Ankara print shirt with plain trousers" }
+      },
+      "etiquette": [
+        "At weddings, guests often wear the chosen 'aso ebi' fabric; ask the hosts.",
+        "Dressing up is a sign of respect at events.",
+        "Modest outfits are expected in religious places."
+      ]
+    },
+    "south-korea": {
+      "name": "South Korea",
+      "flag": "🇰🇷",
+      "styleNote": "Trend-led K-fashion: clean layers, oversized fits and neat, polished looks.",
+      "seasonNotes": {
+        "summer": "Hot and humid. Loose linen and cotton, often in neutral colours.",
+        "winter": "Very cold and dry. Long padded coats are the signature look.",
+        "monsoon": "Jangma rainy season in July. Rain boots and umbrellas.",
+        "spring": "Mild with some yellow dust. Light trench coats and pastel knits.",
+        "autumn": "Crisp and clear, the best season for layered outfits."
+      },
+      "traditional": {
+        "women": { "festival": "Hanbok with a full skirt (chima) and short jacket (jeogori) for Chuseok or Seollal", "wedding": "Elegant dress in a soft colour" },
+        "men": { "festival": "Hanbok with a vest and baggy trousers for Chuseok or Seollal", "wedding": "Neat suit in navy or grey" },
+        "unisex": { "festival": "Modern hanbok-inspired jacket and trousers" }
+      },
+      "etiquette": [
+        "Shoulder-baring tops are less common than short skirts.",
+        "Neat and well-groomed is valued in offices.",
+        "Avoid white flowers or all-black at happy events."
+      ]
+    },
+    "brazil": {
+      "name": "Brazil",
+      "flag": "🇧🇷",
+      "styleNote": "Relaxed, bright and body-confident, with lots of colour and beach-ready style.",
+      "seasonNotes": {
+        "summer": "Hot (December to March). Light dresses, shorts and sandals.",
+        "winter": "Mild in the north, cool in the south. A light jacket is usually enough.",
+        "monsoon": "Tropical downpours in summer. Quick-dry fabrics and Havaianas.",
+        "spring": "Warm and sunny. Bright prints.",
+        "autumn": "Warm to mild. Light layers."
+      },
+      "traditional": {
+        "women": { "festival": "Bright, colourful outfit with glitter for Carnival, or a checked dress for Festa Junina" },
+        "men": { "festival": "Bright shirt for Carnival, or a plaid shirt and straw hat for Festa Junina" },
+        "unisex": { "festival": "Colourful Carnival outfit, or plaid and a straw hat for Festa Junina" }
+      },
+      "etiquette": [
+        "Brazilian seasons are opposite to the northern hemisphere.",
+        "Dressing up for evenings out is common.",
+        "Business wear is lighter because of the heat."
+      ]
+    },
+    "australia": {
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "styleNote": "Laid-back, sunny and outdoorsy. Smart-casual works almost everywhere.",
+      "seasonNotes": {
+        "summer": "Hot with strong sun (December to February). Hats and UV-protective clothing.",
+        "winter": "Mild in the north, cold in the south. Light coats and knits.",
+        "monsoon": "Wet season in the tropical north. Quick-dry clothes.",
+        "spring": "Warm and breezy. Floral dresses and light shirts.",
+        "autumn": "Mild and pleasant. Light jackets."
+      },
+      "traditional": {
+        "women": { "festival": "Light summer dress for a Christmas barbecue on the beach" },
+        "men": { "festival": "Linen shirt and shorts for a summer Christmas barbecue" },
+        "unisex": { "festival": "Light linen set for summer Christmas celebrations" }
+      },
+      "etiquette": [
+        "Seasons are opposite to the northern hemisphere.",
+        "Sun protection is a must: hat, sunglasses and sunscreen.",
+        "Smart-casual is fine for most restaurants."
+      ]
+    }
+  }
+}

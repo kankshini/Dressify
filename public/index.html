@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dressify – Fashion Guidance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <span class="logo">Dressify</span>
+      <a href="#favorites" class="nav-link">♥ Saved looks</a>
+    </nav>
+    <div class="hero-text">
+      <h1>Dress right, <em>wherever</em> you are.</h1>
+      <p>Tell us where you are, the season and the occasion. We'll suggest outfits, colours and local style tips made for you.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <form id="finder" class="card finder">
+      <h2>Find my outfit</h2>
+      <div class="fields">
+        <label>Country <select name="country" required></select></label>
+        <label>Gender <select name="gender" required></select></label>
+        <label>Season <select name="season" required></select></label>
+        <label>Occasion <select name="occasion" required></select></label>
+      </div>
+      <button type="submit" class="btn">Get recommendations ✨</button>
+      <p id="form-error" class="error" hidden></p>
+    </form>
+
+    <section id="results" hidden></section>
+
+    <section id="favorites" class="card">
+      <h2>♥ Saved looks</h2>
+      <ul id="favorites-list" class="favorites"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">Made with ♥ by Dressify · Style guidance for every country, season and occasion</footer>
+
+  <script src="illustration.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
