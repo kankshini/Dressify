@@ -1,0 +1,9 @@
+# Settings for hosting Dressify for free on Render (https://render.com).
+services:
+  - type: web
+    name: dressify
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/options
